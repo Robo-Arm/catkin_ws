@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find iiwa_custom)/launch/original.launch" />
+    <node pkg="iiwa_custom" name="random_start" type="random_start.py" output="screen" />
+    <node pkg="iiwa_custom" name="add_obstacles" type="add_obstacles.py" output="screen" launch-prefix="bash -c 'sleep 15; $0 $@' " />
+    <node pkg="iiwa_custom" name="joint_to_pose" type="position_subscriber.py" output="screen" /> 
+</launch>
