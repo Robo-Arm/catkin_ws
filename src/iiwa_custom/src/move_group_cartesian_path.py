@@ -4,7 +4,6 @@ import copy
 import sys
 from math import pi
 import rosbag
-
 import shape_msgs.msg
 import geometry_msgs.msg
 import moveit_commander
